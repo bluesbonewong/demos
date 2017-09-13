@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>居中垂直positiong:absolute和margin</title>
+	<style>
+		.wrapper,
+		body,
+		html {
+			height: 100%;
+		}
+
+		.content {
+			text-align: center;
+			width: 300px;
+			height: 200px;
+			background: grey;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			margin-left: -150px;
+			margin-top: -100px;
+			vertical-align: middle;
+		}
+		.content:before {
+			content: '';
+			vertical-align: middle;
+			display: inline-block;
+			height:100%;
+			/*必须要100%高度！否则vertical-align无效*/
+		}
+	</style>
+</head>
+<body>
+<div class="wrapper">
+	<div class="content">
+		这个div因为positiong:absolute和margin
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>vertical-align和table-cell</title>
+	<style>
+		.wrapper,
+		body,
+		html {
+			height: 100%;
+		}
+
+		.content {
+			text-align: center;
+			width: 300px;
+			height: 200px;
+			background: grey;
+			vertical-align: middle;
+			color: darkblue;
+			display: table-cell;
+		}
+	</style>
+</head>
+<body>
+<div class="wrapper">
+	<div class="content">
+		文本因为vertical-align和table-cell居中
+		可以多行显示
+		但不能和绝对定位一起用
+	</div>
+</div>
+</body>
+</html>
