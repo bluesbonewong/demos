@@ -1,0 +1,153 @@
+body {
+	margin: 0;
+	font-family: "Lantinghei SC", "Open Sans", Arial, "Hiragino Sans GB", "Microsoft YaHei", "\5FAE\8F6F\96C5\9ED1", "STHeiti", "WenQuanYi Micro Hei", SimSun, sans-serif;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.information ul li:nth-child(6):hover {
+	box-shadow: 0 4px 8px 2px rgba(0,0,0,0.2);
+	transition: .3s;
+	color: orange;
+}
+
+ul,
+li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.layout {
+	width: 960px;
+	margin: 30px auto;
+	padding: 30px 0 30px 50px;
+	box-shadow: 0 4px 8px 2px rgba(0, 0, 0, 0.2);
+}
+
+header,
+main,
+footer {
+	width: 100%;
+	margin-right: 30px;
+}
+
+main,
+footer {
+	width:95%;
+}
+
+header > ul {
+	margin-top: 30px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+header ul .name {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-left: 15px;
+}
+
+header ul .name div {
+	margin-left: 20px;
+}
+
+header ul .name h1 {
+	margin: 0;
+	font-size: 34px;
+	font-weight: normal;
+}
+
+header ul .name p {
+	margin: 4px 0 0 0;
+	font-size: 18px;
+}
+
+header .name img {
+	width: 150px;
+	height: 150px;
+	border-radius: 150px;
+}
+
+header .information {
+	width: 400px;
+}
+
+header .information li:first-child {
+	border-bottom: 4px solid black;
+}
+
+header .information li > h3 {
+	margin: 0 0 4px 0;
+}
+
+header .information li {
+	margin-bottom: 4px;
+}
+
+header .information li > span {
+	margin-right: 10px;
+}
+
+#work h3,
+#project h3,
+#education h3,
+#character h3,
+#skills h3 {
+	border-bottom: 1px solid rgba(128, 128, 128, 0.21);
+	padding-bottom: 8px;
+	width: 200px;
+	margin: 40px 0 20px 0;
+	font-size: 24px;
+}
+
+.project-item,
+.work-item,
+.education-item {
+	padding-left: 70px;
+	border-left: 1px solid black;
+	margin-left: 10px;
+	position: relative;
+}
+
+.item-title {
+	font-size: 18px;
+	margin: 15px 0;
+}
+
+.item-title ~ li {
+	padding-left:15px;
+}
+
+.item-title ~ li span {
+	font-weight:500;
+}
+
+.item-title > span {
+	font-size: 14px;
+	color: grey;
+}
+
+footer {
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+}
+
+#character li,
+#skills li {
+	width:150px;
+	margin-bottom: 10px;
+}
+
+#character ul,
+#skills ul {
+	display: flex;
+	flex-wrap: wrap;
+}

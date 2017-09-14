@@ -1,0 +1,78 @@
+ul,
+li {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+}
+
+html,
+body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	font-family: "Lantinghei SC", "Open Sans", Arial, "Hiragino Sans GB", "Microsoft YaHei", "\5FAE\8F6F\96C5\9ED1", "STHeiti", "WenQuanYi Micro Hei", SimSun, sans-serif;
+}
+
+.wrapper {
+	height: 100%;
+	background: #fff2e3;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.wrapper h1 {
+	font-weight: bold;
+	font-size: 44px;
+	color: #87968e;
+	margin:26px 0;
+}
+
+.wrapper .introduce {
+	color: #87968e;
+	margin:0 0 26px 0;
+	font-size:14px;
+}
+
+.wrapper .buttons {
+	display: flex;
+	width:400px;
+	justify-content: space-between;
+	margin-bottom:26px;
+}
+
+.wrapper .buttons li {
+	background: #72b890;
+	padding:4px 8px;
+	border-radius: 4px;
+	margin:0 6px;
+}
+
+.wrapper .buttons li:hover {
+	background: #99f7c1;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.wrapper .buttons:last-of-type {
+	justify-content: center;
+	margin-top:26px;
+}
+
+.wrapper img {
+	width:400px;
+	height:300px;
+}
+
+.wrapper .author {
+	margin:0;
+	color: #87968e;
+	font-size:14px;
+}
+.wrapper .author a {
+	color: #72b890;
+}
