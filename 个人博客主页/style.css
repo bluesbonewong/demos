@@ -1,0 +1,491 @@
+body {
+	margin: 0;
+	font-family: "Lantinghei SC", "Open Sans", Arial, "Hiragino Sans GB", "Microsoft YaHei", "\5FAE\8F6F\96C5\9ED1", "STHeiti", "WenQuanYi Micro Hei", SimSun, sans-serif;
+	height: 100%;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+html {
+	height: 100%;
+}
+
+ul,
+li {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+#welcome {
+	width: 100%;
+	height: 810px;
+	background: url(img/header.JPG) no-repeat scroll;
+	background-size: contain;
+}
+
+#nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#nav h4 {
+	font-weight: bold;
+	margin: 40px 30px;
+	font-size: 28px;
+}
+
+#nav .nav-right {
+	color: #FFF9DA;
+	margin-right: 30px;
+	display: flex;
+}
+
+#nav .nav-right > li {
+	font-size: 18px;
+	margin: 0 10px;
+	position: relative;
+}
+
+#nav .nav-right > li > a:hover {
+	color: orange;
+	transition: all ease .5s;
+}
+
+#nav .nav-right > li > a:hover:after {
+	content: '';
+	display: inline-block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	border-bottom: 2px solid orange;
+}
+
+#welcome .welcome-title {
+	padding: 180px 0;
+	margin: 0 auto;
+	width: 90%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#welcome .welcome-title h1 {
+	font-size: 56px;
+	color: white;
+	margin: 30px 0 0 0;
+}
+
+#welcome .welcome-title h3 {
+	font-size: 30px;
+	margin: 30px 0 0 0;
+	font-weight: normal;
+}
+
+#welcome .welcome-title button {
+	margin-top: 30px;
+	border: none;
+	background: orange;
+	font-weight: bold;
+	font-size: 30px;
+	border-radius: 8px;
+	outline: none;
+	color: #fff;
+}
+
+#welcome .welcome-title button a {
+	display: inline-block;
+	padding: 10px 32px;
+}
+
+#welcome .welcome-title button:hover {
+	box-shadow: 0 2px 8px 0 rgba(255, 255, 255, 0.8);
+	transition: .3s;
+}
+
+#essay {
+	width: 100%;
+	background: #fff;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.section-title {
+	text-align: center;
+	margin: 150px 0 100px 0;
+}
+
+.section-title h2 {
+	font-size: 48px;
+	margin: 0 0 20px 0;
+}
+
+#essay .essay-article {
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	margin: 0 0 150px 0;
+}
+
+#essay .essay-article li {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 25%;
+}
+
+#essay .essay-article li p {
+	text-align: center;
+	margin: 0;
+}
+
+#video {
+	width: 100%;
+	background: #efefef;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#video .video-item {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 150px;
+}
+
+#video .video-item > li {
+	width: 20%;
+	margin: 0 40px 30px 40px;
+	text-align: center;
+	box-shadow: 0 2px 8px 1px rgba(0, 0, 0, 0.2);
+	position: relative;
+}
+
+#video .video-item > li img {
+	width: 100%;
+	height: 300px;
+}
+
+#video .video-item li > span {
+	display: flex;
+	width: 100%;
+	height: 300px;
+	background: rgba(0, 0, 0, 0.7);
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	justify-content: center;
+	align-items: center;
+}
+
+#video .video-item li span:hover {
+	transition: all ease .3s;
+	opacity: 1;
+}
+
+#video .video-item > li h6 {
+	font-size: 18px;
+	font-weight: 500;
+	margin: 10px;
+}
+
+#video .video-item > li p {
+	font-size: 14px;
+	margin: 0 0 10px 0;
+	color: grey;
+}
+
+#music {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+#music .music-item > li:nth-of-type(odd):before {
+	content: '';
+	display: inline-block;
+	border-right: 4px solid #eee;
+	height: 200px;
+	position: absolute;
+	top: 180px;
+	right: 93px;
+	z-index: -1;
+}
+
+#music .music-item > li:nth-of-type(even):before {
+	content: '';
+	display: inline-block;
+	border-right: 4px solid #eee;
+	height: 200px;
+	position: absolute;
+	top: 180px;
+	left: 93px;
+	z-index: -1;
+}
+
+#music .music-item > li:nth-of-type(odd) {
+	width: 50%;
+	display: flex;
+	flex-direction: row-reverse;
+	align-items: center;
+	position: relative;
+	text-align: right;
+	left: 95px;
+	margin-bottom: 150px;
+}
+
+#music .music-item > li:nth-of-type(odd) .music-item-img img {
+	width: 170px;
+	height: 170px;
+	border-radius: 100%;
+	border: 10px solid #eeeeee;
+	margin-left: 30px;
+}
+
+#music .music-item > li:nth-of-type(even) {
+	width: 50%;
+	display: flex;
+	align-items: center;
+	position: relative;
+	left: 50%;
+	margin-left: -95px;
+	margin-bottom: 150px;
+}
+
+#music .music-item > li:nth-of-type(even) .music-item-img img {
+	width: 170px;
+	height: 170px;
+	border-radius: 100%;
+	border: 10px solid #eeeeee;
+	margin-right: 30px;
+}
+
+#music .music-item > li .music-item-text h4 {
+	margin: 0 0 10px 0;
+}
+
+#music .music-item > li .music-item-text p {
+	margin: 0;
+	color: #bebebe;
+}
+
+#music .music-item > li:last-of-type:before {
+	display: none;
+}
+
+#music .music-item > li:last-of-type .music-item-img {
+	width: 170px;
+	height: 170px;
+	border-radius: 100%;
+	border: 10px solid #eeeeee;
+	margin-left: 30px;
+	background: orange;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	line-height: 30px;
+}
+
+#photo {
+	width: 100%;
+	background: #efefef;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+#photo .photo-text {
+	width: 50%;
+	color: gray;
+	margin: 0 0 150px 0;
+}
+
+#photo .photo-article {
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	margin: 0 0 100px 0;
+	width: 70%;
+}
+
+#photo .photo-article li {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 25%;
+	text-align: center;
+}
+
+#photo .photo-article img {
+	width: 300px;
+	height: 200px;
+	border-radius: 6px;
+	opacity: .7;
+}
+
+#photo .photo-article li h4 {
+	margin: 10px 0;
+	font-size: 26px;
+	font-weight: 500;
+}
+
+#photo .photo-article li p {
+	margin: 0 0 10px 0;
+	font-size: 14px;
+	color: gray;
+}
+
+#photo .photo-article .iconfont-wrap {
+	width: 70%;
+	display: flex;
+	justify-content: space-around;
+}
+
+#photo .photo-article .iconfont-wrap a:hover {
+	color: orange;
+	transition: all .3s;
+}
+
+#contact {
+	width: 100%;
+	background: url("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1505630419888&di=7a2841ab0a2e8b995af3341d17f9d4df&imgtype=0&src=http%3A%2F%2Fuploadfile.bizhizu.cn%2F2015%2F0127%2F20150127025821687.jpg") no-repeat;
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+#contact .section-title {
+	color: #ffffff;
+}
+
+#contact form {
+	max-width: 80%;
+	margin: 0 auto 150px auto;
+}
+
+#contact form .top-wrapper .name-email-phone {
+	margin-right: 10px;
+}
+
+#contact form .top-wrapper input {
+	width: 400px;
+	height: 40px;
+	padding: 10px;
+	margin-bottom: 20px;
+	border-radius: 4px;
+	outline: 0;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	font-size: 20px;
+	font-weight: 500;
+}
+
+#contact form .top-wrapper input:focus {
+	border: 1px solid orange;
+}
+
+#contact form .top-wrapper #message {
+	height: 204px;
+	width: 400px;
+	padding: 10px;
+	margin-bottom: 20px;
+	border-radius: 4px;
+	outline: 0;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	font-size: 20px;
+	font-weight: 500;
+}
+
+#contact form .top-wrapper #message:focus {
+	border: 1px solid orange;
+}
+
+#contact form .top-wrapper {
+	display: flex;
+	justify-content: center;
+}
+
+#contact form .button-send {
+	text-align: center;
+}
+
+#submit {
+	border: none;
+	background: orange;
+	font-weight: bold;
+	font-size: 30px;
+	border-radius: 8px;
+	outline: none;
+	color: #fff;
+	padding: 15px 40px;
+}
+
+#submit:hover {
+	background: #ffc000;
+	transition: all .3s;
+}
+
+#footer {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	font-size: 14px;
+}
+
+#footer .iconfont-wrap {
+	width: 10%;
+	display: flex;
+	justify-content: space-around;
+	position: relative;
+}
+
+.clearfix:after {
+	content: '';
+	display: table;
+	clear: both;
+}
+
+#footer .iconfont-wrap p {
+	position: absolute;
+	right: 430px;
+	margin: 0;
+	line-height: 44px;
+	white-space: nowrap;
+}
+
+#footer .iconfont-wrap ul {
+	position: absolute;
+	display: flex;
+	width: 300px;
+	left: 430px;
+	height: 100%;
+	align-items: center;
+}
+
+#footer .iconfont-wrap ul > li {
+	margin: 0 10px;
+}
+
+#footer .iconfont-wrap a:hover {
+	color: orange;
+	transition: all .3s;
+}
