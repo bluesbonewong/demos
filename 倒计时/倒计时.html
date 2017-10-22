@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ch">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>倒计时</title>
+</head>
+<body>
+<select name="time" id="timeSelect">
+	<option value="1" selected>1分钟</option>
+	<option value="10">10分钟</option>
+	<option value="30">30分钟</option>
+	<option value="60">60分钟</option>
+</select>
+<button id="startBtn">start</button>
+<button id="pauseBtn">pause</button>
+<button id="resumeBtn">resume</button>
+<div id="output"></div>
+<script>
+
+	var starBtnNode = document.querySelector('#startBtn')
+	var pauseBtnNode = document.querySelector('#pauseBtn')
+	var resumeBtnNode = document.querySelector('#resumeBtn')
+	var outputNode = document.querySelector('#output')
+	var selectNode = document.querySelector('#timeSelect')
+
+	var timeCount
+	var lastTimeId
+
+	pauseBtnNode.disabled = true
+	resumeBtnNode.disabled = true
+
+	function showTime() {
+		outputNode.innerText = timeCount + '秒'
+		timeCount -= 1
+		if (timeCount === 0) {
+			return undefined
+		}
+		lastTimeId = setTimeout(showTime, 1000)
+	}
+
+	starBtnNode.addEventListener('click', function () {
+		timeCount = selectNode.value * 60
+		if (lastTimeId) {
+			window.clearTimeout(lastTimeId)
+		}
+		showTime()
+		pauseBtnNode.disabled = false
+		resumeBtnNode.disabled = false
+	})
+
+	pauseBtnNode.addEventListener('click',function () {
+		if (lastTimeId) {
+			window.clearTimeout(lastTimeId)
+			pauseBtnNode.disabled = true
+			resumeBtnNode.disabled = false
+		}
+	})
+
+	resumeBtnNode.addEventListener('click',function () {
+		showTime()
+		pauseBtnNode.disabled = false
+		resumeBtnNode.disabled = true
+	})
+
+</script>
+</body>
+</html>
