@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ch">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>index</title>
+</head>
+<body>
+<button id="popup">open a new window</button>
+<button id="getSearch">get search</button>
+<button id="browserType">get browserType</button>
+<script src="dom.js"></script>
+<script>
+	var popupNode = document.querySelector('#popup')
+	var getSearchNode = document.querySelector('#getSearch')
+	var getbrowserType = document.querySelector('#browserType')
+
+	popupNode.addEventListener('click', function () {
+		$.bom.openAtCenter(300, 300, 'iframe.html')
+	})
+	getSearchNode.addEventListener('click', function () {
+		console.log($.bom.search('我曹', 234233))
+	})
+	getbrowserType.addEventListener('click', function () {
+		$.bom.browserType().isAndroid()
+		$.bom.browserType().isIpad()
+		$.bom.browserType().isIphone()
+		$.bom.browserType().isIOS()
+	})
+
+
+</script>
+</body>
+</html>
