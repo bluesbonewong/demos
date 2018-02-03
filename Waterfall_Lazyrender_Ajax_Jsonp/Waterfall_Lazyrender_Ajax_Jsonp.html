@@ -136,7 +136,7 @@
 	function getData(callback) {
 		$.ajax({
 			// 接口：http://platform.sina.com.cn/slide/album_tech?jsoncallback=func&app_key=1271687855&num=3&page=4
-			url: 'http://platform.sina.com.cn/slide/album_tech',
+			url: 'https://platform.sina.com.cn/slide/album_tech',
 			dataType: 'jsonp',
 			jsonp: 'jsoncallback', // 在一个JSONP请求中重写回调函数的名字。这个值用来替代在"callback=?"这种GET或POST请求中URL参数里的"callback"部分
 			data: {
